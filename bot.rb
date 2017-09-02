@@ -17,7 +17,10 @@ Bot.on :message do |message|
     # recipient: message.sender,
     recipient: { "id" => 1455411154514555 },
     message: {
-      text: message.text + '～哈哈' + t.to_s + 'by' + (message.sender).to_s
+      text: message.text + '\n' +
+      		'～哈哈' + '\n' +
+      		t.to_s  + '\n' +
+      		'by' + (message.sender).to_s
     }
   )
 
@@ -25,7 +28,13 @@ Bot.on :message do |message|
     # recipient: message.sender,
     recipient: { "id" => 1455411154514555 },
     message: {
-      attachment: "http://pic.pimg.tw/guio/1345036624-2128600900.png"
+      attachment: {
+      	type: "image",
+      	payload: {
+			url: "http://pic.pimg.tw/guio/1345036624-2128600900.png",
+			is_reusable: true
+      	}
+      }
     }
   )  
   # Bot.deliver(
