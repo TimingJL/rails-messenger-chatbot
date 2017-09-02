@@ -8,7 +8,7 @@ end
 
 include Facebook::Messenger
 
-Facebook::Messenger::Subscriptions.subscribe
+# Facebook::Messenger::Subscriptions.subscribe
 # message.id          # => 'mid.1457764197618:41d102a3e1ae206a38'
 # message.sender      # => { 'id' => '1008372609250235' }
 # message.sent_at     # => 2016-04-22 21:30:36 +0200
