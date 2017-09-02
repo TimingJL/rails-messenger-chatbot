@@ -17,7 +17,7 @@ Bot.on :message do |message|
     recipient: message.sender,
     # recipient: { id => 10208116277459762 },
     message: {
-      text: message.text + '～哈哈' + t.to_s + 'by' + (message.sender.is_a?).to_s
+      text: message.text + '～哈哈' + t.to_s + 'by' + (message.sender).to_s
     }
   )
   
