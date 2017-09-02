@@ -14,12 +14,13 @@ Bot.on :message do |message|
   puts "Received #{message.text} from #{message.sender}"
   t = Time.new
   Bot.deliver(
-    recipient: message.sender,
+    # recipient: message.sender,
+    recipient: {"id"=>"10208116277459762"},
     message: {
       text: message.text + '～哈哈' + t.to_s + 'by' + (message.sender).to_s
     }
   )
-
+  
   # Bot.deliver(
   #   recipient: message.sender,
   #   message: {
