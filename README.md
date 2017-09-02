@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Deploy a Messenger bot to Heroku      
+https://medium.com/magnetis-backstage/deploy-a-messenger-bot-to-heroku-e1a4d5630fa4
 
-Things you may want to cover:
+* How to build a fully functional chatbot on Facebook Messenger with Ruby on Rails     
+https://medium.com/@JoeyRob1/chatbot-development-tutorial-how-to-build-a-fully-functional-weather-bot-on-facebook-messenger-c94ac7c59185
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* How to Create a Facebook Messenger Bot with Ruby on Rails     
+https://chatbotslife.com/create-a-facebook-messenger-bot-with-ruby-on-rails-4ffd8b851135
