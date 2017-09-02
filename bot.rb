@@ -13,11 +13,12 @@ include Facebook::Messenger
 Bot.on :message do |message|
   puts "Received #{message.text} from #{message.sender}"
   t = Time.new
+
   Bot.deliver(
-    # recipient: message.sender,
-    recipient: { "id" => 1455411154514555 },
+    recipient: message.sender,
+    # recipient: { "id" => 1455411154514555 },
     message: {
-      text: message.text +'～哈哈'
+      text: message.text
     }
   )
 
