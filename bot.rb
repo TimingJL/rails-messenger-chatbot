@@ -54,3 +54,7 @@ Bot.on :postback  do |postback|
     }
   )
 end
+
+Bot.on :message do |message|
+  puts "got your message!"
+end
