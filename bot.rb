@@ -1,11 +1,11 @@
 require 'facebook/messenger'
 
 # 1
-Facebook::Messenger.configure do |config|
-  config.access_token = ENV['ACCESS_TOKEN']
-  config.verify_token = ENV['VERIFY_TOKEN']
-end
-
+# Facebook::Messenger.configure do |config|
+#   config.access_token = ENV['ACCESS_TOKEN']
+#   config.verify_token = ENV['VERIFY_TOKEN']
+# end
+Facebook::Messenger::Subscriptions.subscribe(access_token: ENV['ACCESS_TOKEN'])
 include Facebook::Messenger
 # Facebook::Messenger::Subscriptions.subscribe(access_token: "EAACHZBBXlBNABALBHchrXEO3UWA1a335SQs8SyZB3xxZB1MWvjpPyUn9jYYhjkL6dQzqshwEcnCKjdWHOKBGIIOon88Fvo2rXhgqb4Mumwe0mmrn1QZAhpuxChIScVQQzbD2EZBymz08ZCeruBViYhpYSVP0BaZBUqbC03YaqmO4QZDZD")
 # Facebook::Messenger::Subscriptions.subscribe
