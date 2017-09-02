@@ -1,5 +1,7 @@
 # README
+A simple FB mesenger Chatbot impelement by Ruby on Rails.
 
+# Reference
 * Deploy a Messenger bot to Heroku      
 https://medium.com/magnetis-backstage/deploy-a-messenger-bot-to-heroku-e1a4d5630fa4
 
