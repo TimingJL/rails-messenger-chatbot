@@ -8,16 +8,49 @@ end
 
 include Facebook::Messenger
 
-# Facebook::Messenger::Subscriptions.subscribe
-# message.id          # => 'mid.1457764197618:41d102a3e1ae206a38'
-# message.sender      # => { 'id' => '1008372609250235' }
-# message.sent_at     # => 2016-04-22 21:30:36 +0200
-# message.text        # => 'Hello, bot!'
+# 2
 Bot.on :message do |message|
-  Bot.deliver({
+  puts "Received #{message.text} from #{message.sender}"
+
+  Bot.deliver(
     recipient: message.sender,
     message: {
-      text: message.text
+      text: "Oh Hello, would you like to see Hello world in which language?"
     }
-  }, access_token: ENV["ACCESS_TOKEN"])
+  )
+
+  Bot.deliver(
+    recipient: message.sender,
+    message: {
+      attachment: {
+        type: 'template',
+        payload: {
+          template_type: 'button',
+          text: 'What service would you like to log in with?',
+          buttons: [
+            { type: 'postback', title: 'French', payload: 'FRENCH' },
+            { type: 'postback', title: 'Italian', payload: 'ITALIAN' }
+          ]
+        }
+      }
+    }
+  )
+end
+
+# 3
+Bot.on :postback  do |postback|
+
+  case postback.payload
+  when 'FRENCH'
+    text = "Bonjour le monde 🇫🇷"
+  when 'INTALIAN'
+    text = "Ciao mondo 🇮🇹"
+  end
+
+  Bot.deliver(
+    recipient: postback.sender,
+    message: {
+      text: text
+    }
+  )
 end
