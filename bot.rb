@@ -15,7 +15,7 @@ Bot.on :message do |message|
   Bot.deliver(
     recipient: message.sender,
     message: {
-      text: message.text +"("+ (Time.new).to_S +")"
+      text: message.text
     }
   )
 
