@@ -7,7 +7,7 @@ require 'facebook/messenger'
 # end
 
 include Facebook::Messenger
-Facebook::Messenger::Subscriptions.subscribe(access_token: ENV['ACCESS_TOKEN'])
+
 # Facebook::Messenger::Subscriptions.subscribe(access_token: "EAACHZBBXlBNABALBHchrXEO3UWA1a335SQs8SyZB3xxZB1MWvjpPyUn9jYYhjkL6dQzqshwEcnCKjdWHOKBGIIOon88Fvo2rXhgqb4Mumwe0mmrn1QZAhpuxChIScVQQzbD2EZBymz08ZCeruBViYhpYSVP0BaZBUqbC03YaqmO4QZDZD")
 # Facebook::Messenger::Subscriptions.subscribe
 # message.id          # => 'mid.1457764197618:41d102a3e1ae206a38'
