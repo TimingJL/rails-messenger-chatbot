@@ -1,5 +1,5 @@
 # README
-A simple FB mesenger Chatbot impelement by Ruby on Rails.
+A simple FB messenger Chatbot implemented by Ruby on Rails.
 
 # Reference
 * Deploy a Messenger bot to Heroku      
