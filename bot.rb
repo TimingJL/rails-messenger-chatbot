@@ -15,42 +15,42 @@ Bot.on :message do |message|
   Bot.deliver(
     recipient: message.sender,
     message: {
-      text: "Oh Hello, would you like to see Hello world in which language?"
+      text: message.text
     }
   )
 
-  Bot.deliver(
-    recipient: message.sender,
-    message: {
-      attachment: {
-        type: 'template',
-        payload: {
-          template_type: 'button',
-          text: 'What service would you like to log in with?',
-          buttons: [
-            { type: 'postback', title: 'French', payload: 'FRENCH' },
-            { type: 'postback', title: 'Italian', payload: 'ITALIAN' }
-          ]
-        }
-      }
-    }
-  )
+  # Bot.deliver(
+  #   recipient: message.sender,
+  #   message: {
+  #     attachment: {
+  #       type: 'template',
+  #       payload: {
+  #         template_type: 'button',
+  #         text: 'What service would you like to log in with?',
+  #         buttons: [
+  #           { type: 'postback', title: 'French', payload: 'FRENCH' },
+  #           { type: 'postback', title: 'Italian', payload: 'ITALIAN' }
+  #         ]
+  #       }
+  #     }
+  #   }
+  # )
 end
 
 # 3
-Bot.on :postback  do |postback|
+# Bot.on :postback  do |postback|
 
-  case postback.payload
-  when 'FRENCH'
-    text = "Bonjour le monde 🇫🇷"
-  when 'INTALIAN'
-    text = "Ciao mondo 🇮🇹"
-  end
+#   case postback.payload
+#   when 'FRENCH'
+#     text = "Bonjour le monde 🇫🇷"
+#   when 'INTALIAN'
+#     text = "Ciao mondo 🇮🇹"
+#   end
 
-  Bot.deliver(
-    recipient: postback.sender,
-    message: {
-      text: text
-    }
-  )
-end
+#   Bot.deliver(
+#     recipient: postback.sender,
+#     message: {
+#       text: text
+#     }
+#   )
+# end
