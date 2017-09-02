@@ -21,19 +21,19 @@ Bot.on :message do |message|
     }
   )
 
-  Bot.deliver(
-    # recipient: message.sender,
-    recipient: { "id" => 1455411154514555 },
-    message: {
-      attachment: {
-      	type: "image",
-      	payload: {
-			url: "http://pic.pimg.tw/guio/1345036624-2128600900.png",
-			is_reusable: true
-      	}
-      }
-    }
-  )  
+  # Bot.deliver(
+  #   # recipient: message.sender,
+  #   recipient: { "id" => 1455411154514555 },
+  #   message: {
+  #     attachment: {
+  #     	type: "image",
+  #     	payload: {
+		# 	url: "http://pic.pimg.tw/guio/1345036624-2128600900.png",
+		# 	is_reusable: true
+  #     	}
+  #     }
+  #   }
+  # )  
   # Bot.deliver(
   #   recipient: message.sender,
   #   message: {
