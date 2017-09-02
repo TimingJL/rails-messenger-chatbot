@@ -1,4 +1,5 @@
 require 'facebook/messenger'
+require "time"
 
 # 1
 Facebook::Messenger.configure do |config|
@@ -11,11 +12,11 @@ include Facebook::Messenger
 # 2
 Bot.on :message do |message|
   puts "Received #{message.text} from #{message.sender}"
-
+  t = Time.new
   Bot.deliver(
     recipient: message.sender,
     message: {
-      text: message.text + '～哈哈'
+      text: message.text + '～哈哈' + t.to_s
     }
   )
 
