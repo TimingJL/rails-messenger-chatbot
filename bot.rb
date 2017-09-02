@@ -16,7 +16,7 @@ Bot.on :message do |message|
   Bot.deliver(
     recipient: message.sender,
     message: {
-      text: message.text + '～哈哈' + t.to_s
+      text: message.text + '～哈哈' + t.to_s + 'by' + (message.sender).to_s
     }
   )
 
